@@ -1,5 +1,31 @@
 @use "@/styles/abstracts/variables" as variables;
 
+.header {
+  background-color: variables.$primary-color;
+  border-bottom: variables.$border-color-primary 1px solid;
+}
+
+.headerBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+}
+
+.logoLink {
+  font-family: var(--font-great-vibes);
+  font-size: 30px;
+  color: variables.$third-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 43px;
+  width: auto;
+}
+
 .menuButton {
   width: 44px;
   height: 44px;
@@ -58,6 +84,7 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 500ms ease;
+  border-top: variables.$border-color-primary 1px solid;
 }
 
 .menuPanelOpen {
@@ -67,4 +94,24 @@
 .mainNavigation {
   min-height: 0;
   overflow: hidden;
+  color: variables.$text-primary-color;
+  font-family: var(--font-inter);
+  font-size: 18px;
+}
+
+.navigationList {
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navigationLink {
+  padding-block: 8px;
+  display: block;
+}
+
+.navigationLinkActive {
+  color: variables.$text-secondary-color;
+  font-weight: 500;
 }

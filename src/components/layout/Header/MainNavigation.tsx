@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/layout/header.module.scss";
+import { usePathname } from "next/navigation";
 
 const navigationLinks = [
   { href: "/", label: "Accueil" },
@@ -10,12 +11,19 @@ const navigationLinks = [
 ];
 
 export default function MainNavigation() {
+  const pathName = usePathname();
   return (
     <nav aria-label="Navigation principale" className={styles.mainNavigation}>
-      <ul>
+      <ul className={styles.navigationList}>
         {navigationLinks.map(({ href, label }) => (
-          <li key={href}>
-            <Link href={href}>{label}</Link>
+          <li key={href} className={styles.navigationItem}>
+            <Link
+              href={href}
+              className={`${styles.navigationLink} ${href === pathName ? styles.navigationLinkActive : ""}`}
+              aria-current={href === pathName ? "page" : undefined}
+            >
+              {label}
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Great_Vibes, Inter } from "next/font/google";
 import "@/styles/main.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="fr" className={`${greatVibes.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );
