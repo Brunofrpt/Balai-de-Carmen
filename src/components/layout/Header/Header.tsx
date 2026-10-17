@@ -8,6 +8,7 @@ import styles from "@/styles/layout/header.module.scss";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
   return (
     <header className={styles.header}>
       <Container>
@@ -42,14 +43,14 @@ export default function Header() {
             <span className={styles.menuIcon} aria-hidden="true"></span>
           </button>
         </div>
-        <div
-          className={`${styles.menuPanel} ${isMenuOpen ? styles.menuPanelOpen : ""}`}
-          inert={!isMenuOpen}
-          id="main-navigation"
-        >
-          <MainNavigation />
-        </div>
       </Container>
+      <div
+        className={`${styles.menuPanel} ${isMenuOpen ? styles.menuPanelOpen : ""}`}
+        inert={!isMenuOpen}
+        id="main-navigation"
+      >
+        <MainNavigation onCloseMenu={closeMenu} />
+      </div>
     </header>
   );
 }
