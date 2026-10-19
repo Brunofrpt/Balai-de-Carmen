@@ -1,16 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import type { KeyboardEvent } from "react";
 import Container from "@/components/layout/Container/Container";
 import MainNavigation from "./MainNavigation";
 import styles from "@/styles/layout/header.module.scss";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeMenu = () => setIsMenuOpen(false);
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape" && isMenuOpen) {
+      closeMenu();
+      menuButtonRef.current?.focus();
+    }
+  };
   return (
-    <header className={styles.header}>
+    <header className={styles.header} onKeyDown={handleKeyDown}>
       <Container>
         <div className={styles.headerBar}>
           <Link
@@ -39,6 +47,7 @@ export default function Header() {
             aria-controls="main-navigation"
             className={styles.menuButton}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            ref={menuButtonRef}
           >
             <span className={styles.menuIcon} aria-hidden="true"></span>
           </button>
