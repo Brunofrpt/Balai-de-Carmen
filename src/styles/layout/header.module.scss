@@ -39,9 +39,11 @@
 .menuButton[aria-expanded="true"] {
   .menuIcon {
     background-color: transparent;
+
     &::before {
       transform: rotate(45deg);
     }
+
     &::after {
       transform: rotate(-45deg);
     }
@@ -118,4 +120,18 @@
 .navigationLinkActive {
   color: variables.$text-secondary-color;
   font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuPanel {
+    transition: none;
+  }
+
+  .menuIcon {
+    transition: none;
+    &::before,
+    &::after {
+      transition: none;
+    }
+  }
 }
