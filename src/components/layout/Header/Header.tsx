@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef } from "react";
+
+import { useState, useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { KeyboardEvent } from "react";
@@ -7,8 +8,23 @@ import Container from "@/components/layout/Container/Container";
 import MainNavigation from "./MainNavigation";
 import styles from "@/styles/layout/header.module.scss";
 
+const getTabletSnapshot = () => window.matchMedia("(min-width: 768px)").matches;
+const subscribeToTablet = (onChange: () => void) => {
+  const tabletQuery = window.matchMedia("(min-width:768px)");
+  tabletQuery.addEventListener("change", onChange);
+  return () => {
+    tabletQuery.removeEventListener("change", onChange);
+  };
+};
+const getServerSnapshot = () => false;
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isTabletOrLarger = useSyncExternalStore(
+    subscribeToTablet,
+    getTabletSnapshot,
+    getServerSnapshot,
+  );
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeMenu = () => setIsMenuOpen(false);
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -55,7 +71,7 @@ export default function Header() {
       </Container>
       <div
         className={`${styles.menuPanel} ${isMenuOpen ? styles.menuPanelOpen : ""}`}
-        inert={!isMenuOpen}
+        inert={!isMenuOpen && !isTabletOrLarger}
         id="main-navigation"
       >
         <MainNavigation onCloseMenu={closeMenu} />

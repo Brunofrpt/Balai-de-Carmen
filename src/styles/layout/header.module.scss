@@ -1,5 +1,5 @@
 @use "@/styles/abstracts/variables" as variables;
-
+@use "@/styles/abstracts/mixins" as mixins;
 .header {
   background-color: rgba(variables.$primary-color, 0.95);
   border-bottom: variables.$border-color-primary 1px solid;
@@ -136,5 +136,15 @@
     &::after {
       transition: none;
     }
+  }
+}
+
+@include mixins.tablet {
+  .menuButton {
+    display: none;
+  }
+
+  .menuPanel {
+    grid-template-rows: 1fr;
   }
 }
