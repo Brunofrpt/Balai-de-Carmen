@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  padding-inline: max(0px, calc((100% - variables.$container-max-width) / 2));
 }
 
 .headerBar {
@@ -118,6 +119,10 @@
 .navigationLink {
   padding-block: 8px;
   display: block;
+  transition: transform 200ms ease;
+  &:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .navigationLinkActive {
@@ -135,6 +140,13 @@
     &::before,
     &::after {
       transition: none;
+    }
+  }
+
+  .navigationLink {
+    transition: none;
+    &:hover {
+      transform: none;
     }
   }
 }
