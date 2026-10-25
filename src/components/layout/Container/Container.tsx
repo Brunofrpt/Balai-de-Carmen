@@ -3,8 +3,12 @@ import styles from "@/styles/layout/container.module.scss";
 
 type ContainerProps = {
   children: ReactNode;
+  className?: string;
 };
 
-export default function Container({ children }: ContainerProps) {
-  return <div className={styles.container}>{children}</div>;
+export default function Container({
+  children,
+  className = "",
+}: ContainerProps) {
+  return <div className={`${styles.container} ${className}`}>{children}</div>;
 }

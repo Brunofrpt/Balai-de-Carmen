@@ -35,7 +35,7 @@ export default function Header() {
   };
   return (
     <header className={styles.header} onKeyDown={handleKeyDown}>
-      <Container>
+      <Container className={styles.headerBarContainer}>
         <div className={styles.headerBar}>
           <Link
             href="/"

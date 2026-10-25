@@ -140,11 +140,23 @@
 }
 
 @include mixins.tablet {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .headerBarContainer {
+      width: auto;
+      margin-inline: 0;
+    }
+  }
   .menuButton {
     display: none;
   }
 
   .menuPanel {
     grid-template-rows: 1fr;
+  }
+
+  .navigationList {
+    flex-direction: row;
   }
 }
