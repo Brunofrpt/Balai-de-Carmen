@@ -38,6 +38,7 @@ export default function Header() {
       <Container className={styles.headerBarContainer}>
         <div className={styles.headerBar}>
           <Link
+            onClick={closeMenu}
             href="/"
             className={styles.logoLink}
             aria-label="Le Balai de Carmen - Accueil"
