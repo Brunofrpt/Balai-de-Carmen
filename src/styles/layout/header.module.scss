@@ -1,13 +1,19 @@
 @use "@/styles/abstracts/variables" as variables;
 @use "@/styles/abstracts/mixins" as mixins;
+
 .header {
   background-color: rgba(variables.$primary-color, 0.95);
   border-bottom: variables.$border-color-primary 1px solid;
   position: sticky;
   top: 0;
   z-index: 1;
-  padding-inline: max(0px, calc((100% - variables.$container-max-width) / 2));
-}
+  padding-inline: max(
+    0px,
+    calc((100% - variables.$container-max-width) / 2)
+  ); // Centre le contenu sans limiter le fond ni la bordure du header.
+} // Les Containers internes conservent leurs propres paddings.
+
+// ----------------Logo et button burger------------
 
 .headerBar {
   display: flex;
@@ -41,6 +47,7 @@
 }
 
 .menuButton[aria-expanded="true"] {
+  // L'apparence du burger suit aria-expanded, sans classe d'état supplémentaire.
   .menuIcon {
     background-color: transparent;
 
@@ -88,8 +95,8 @@
 
 .menuPanel {
   display: grid;
-  grid-template-rows: 0fr;
-  transition:
+  grid-template-rows: 0fr; // Anime le repli du menu sans imposer de hauteur fixe
+  transition:// La bordure disparaît seulement à la fin du repli.
     grid-template-rows 500ms ease,
     border-top-color 0ms ease 500ms;
   border-top: transparent 1px solid;
@@ -98,11 +105,11 @@
 .menuPanelOpen {
   grid-template-rows: 1fr;
   border-top-color: variables.$border-color-primary;
-  transition-delay: 0ms;
+  transition-delay: 0ms; // À l'ouverture, la bordure apparaît immédiatement.
 }
 
 .mainNavigation {
-  min-height: 0;
+  min-height: 0; // L'enfant direct de la grille doit pouvoir se réduire à zéro.
   overflow: hidden;
   color: variables.$text-primary-color;
   font-family: var(--font-inter);
@@ -130,6 +137,8 @@
   font-weight: 500;
 }
 
+// -------------préférence de réduction des animations-----------------
+
 @media (prefers-reduced-motion: reduce) {
   .menuPanel {
     transition: none;
@@ -150,6 +159,10 @@
     }
   }
 }
+
+// --------Média Queries -----------------
+
+// --------Tablettes-----------
 
 @include mixins.tablet {
   .header {

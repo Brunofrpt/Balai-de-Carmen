@@ -6,7 +6,7 @@ $text-secondary-color: #ae568b;
 
 $border-color-primary: #f3e3ed;
 
-$breakpoint-tablet: 768px;
+$breakpoint-tablet: 768px; // À synchroniser avec les requêtes matchMedia de Header.tsx.
 $breakpoint-desktop: 1024px;
 
-$container-max-width: 1300px;
+$container-max-width: 1300px; // Largeur partagée par le container et le calcul de centrage du header.scss
