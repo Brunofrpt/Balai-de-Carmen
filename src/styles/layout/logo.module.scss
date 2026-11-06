@@ -1,0 +1,15 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+.logoLink {
+  font-family: var(--font-great-vibes);
+  font-size: 30px;
+  color: variables.$third-color;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 43px;
+  width: auto;
+}
