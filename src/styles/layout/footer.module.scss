@@ -1,0 +1,85 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+.footer {
+  background-color: variables.$background-color;
+  color: variables.$primary-color;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-inter);
+  font-size: variables.$font-size-sm;
+  line-height: variables.$font-size-sm-line-height;
+
+  .footerLogo {
+    color: variables.$primary-color;
+    font-size: variables.$font-size-xxl;
+    img {
+      height: 60px;
+    }
+  }
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-xxl;
+  padding-block: 64px;
+}
+
+.footerDescription {
+  line-height: variables.$font-size-base-line-height;
+}
+
+.blocContact {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-sm;
+}
+
+.blocContact address {
+  font-style: normal;
+}
+
+.contactTitle {
+  font-family: var(--font-cormorant-garamond);
+  font-size: variables.$font-size-xs;
+  font-weight: 400;
+  letter-spacing: 3.6px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-s;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-s;
+}
+
+.footerBottom {
+  font-size: variables.$font-size-xs;
+  border-top: 1px solid variables.$border-color-secondary;
+  padding-block: 24px;
+}
+
+.footerBottomList {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-xs;
+}
+
+@include mixins.tablet {
+  .footerTop {
+    flex-direction: row;
+  }
+  .footerTop > * {
+    flex: 1;
+  }
+  .footerBottomList {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
