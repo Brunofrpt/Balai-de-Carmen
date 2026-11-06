@@ -1,10 +1,37 @@
+@use "sass:math";
+
 $primary-color: #fef8fccc;
 $third-color: #ae568b;
 
 $text-primary-color: #34152bbf;
 $text-secondary-color: #ae568b;
 
+$font-size-xs: 0.75rem;
+$font-size-xs-line-height: math.div(1rem, $font-size-xs);
+$font-size-sm: 0.875rem;
+$font-size-sm-line-height: math.div(1.25rem, $font-size-sm);
+$font-size-base: 1rem;
+$font-size-base-line-height: 1.625;
+$font-size-m: 1.25rem;
+$font-size-ml: 1.5rem;
+$font-size-l: 1.75rem;
+$font-size-xl: 2rem;
+$font-size-xxl: 2.25rem;
+
+$spacing-xxs: 0.25rem;
+$spacing-xs: 0.5rem;
+$spacing-s: 0.75rem;
+$spacing-sm: 1rem;
+$spacing-m: 1.25rem;
+$spacing-ml: 1.5rem;
+$spacing-l: 1.75rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+$background-color: #992b6d;
+
 $border-color-primary: #f3e3ed;
+$border-color-secondary: #fef8fc26;
 
 $breakpoint-tablet: 768px; // À synchroniser avec les requêtes matchMedia de Header.tsx.
 $breakpoint-desktop: 1024px;
