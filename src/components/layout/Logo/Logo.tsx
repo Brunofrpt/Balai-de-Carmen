@@ -4,14 +4,16 @@ import styles from "@/styles/layout/logo.module.scss";
 
 type LogoProps = {
   className?: string;
+  onClick?: () => void;
 };
 
-export default function Logo({ className = "" }: LogoProps) {
+export default function Logo({ className = "", onClick }: LogoProps) {
   return (
     <Link
       href="/"
       aria-label="Le Balai de Carmen - Accueil"
       className={`${styles.logoLink} ${className}`}
+      onClick={onClick}
     >
       <Image
         className={styles.logo}

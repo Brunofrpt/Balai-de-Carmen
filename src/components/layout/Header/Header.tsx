@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useRef, useSyncExternalStore } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import Logo from "../Logo/Logo";
 import type { KeyboardEvent } from "react";
 import Container from "@/components/layout/Container/Container";
 import MainNavigation from "./MainNavigation";
@@ -39,22 +38,7 @@ export default function Header() {
     <header className={styles.header} onKeyDown={handleKeyDown}>
       <Container className={styles.headerBarContainer}>
         <div className={styles.headerBar}>
-          <Link
-            onClick={closeMenu}
-            href="/"
-            className={styles.logoLink}
-            aria-label="Le Balai de Carmen - Accueil"
-          >
-            <Image
-              className={styles.logo}
-              src="/logo_balai.webp"
-              alt=""
-              width={80}
-              height={120}
-            />
-            <span>Le Balai de Carmen</span>
-          </Link>
-
+          <Logo onClick={closeMenu} />
           <button
             type="button"
             aria-label={
