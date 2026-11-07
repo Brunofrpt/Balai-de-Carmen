@@ -31,10 +31,12 @@ export default function Footer() {
               </p>
             </li>
             <li>
-              <Link href="">Politique de confidentialité</Link>
+              <Link href="/politique-de-confidentialite">
+                Politique de confidentialité
+              </Link>
             </li>
             <li>
-              <Link href="">Mentions légales</Link>
+              <Link href="/mentions-legales">Mentions légales</Link>
             </li>
           </ul>
         </Container>
