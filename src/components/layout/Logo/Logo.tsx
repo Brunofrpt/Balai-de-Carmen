@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/styles/layout/logo.module.scss";
+import styles from "@/styles/components/logo.module.scss";
 
 type LogoProps = {
   className?: string;
