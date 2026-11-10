@@ -1,10 +1,14 @@
 @use "sass:math";
 
 $primary-color: #fef8fccc;
+$primary-color-accent: #fcd5e7;
+$secondary-color: #992b6d;
 $third-color: #ae568b;
 
 $text-primary-color: #34152bbf;
+$text-primary-opaque: #34152b;
 $text-secondary-color: #ae568b;
+$text-third-color: #992b6d;
 
 $font-size-xs: 0.75rem;
 $font-size-xs-line-height: math.div(1rem, $font-size-xs);
@@ -12,11 +16,16 @@ $font-size-sm: 0.875rem;
 $font-size-sm-line-height: math.div(1.25rem, $font-size-sm);
 $font-size-base: 1rem;
 $font-size-base-line-height: 1.625;
-$font-size-m: 1.25rem;
+$font-size-m: 1.125rem;
+$font-size-m-line-height: math.div(1.4625rem, $font-size-m);
 $font-size-ml: 1.5rem;
 $font-size-l: 1.75rem;
 $font-size-xl: 2rem;
 $font-size-xxl: 2.25rem;
+$font-size-el: 3rem;
+$font-size-el-line-height: math.div(3.15rem, $font-size-el);
+$font-size-max: 3.75rem;
+$font-size-max-line-height: math.div(3.75rem, $font-size-max);
 
 $spacing-xxs: 0.25rem;
 $spacing-xs: 0.5rem;
@@ -27,6 +36,7 @@ $spacing-ml: 1.5rem;
 $spacing-l: 1.75rem;
 $spacing-xl: 2rem;
 $spacing-xxl: 3rem;
+$spacing-section: 7.5rem;
 
 $background-color: #992b6d;
 
