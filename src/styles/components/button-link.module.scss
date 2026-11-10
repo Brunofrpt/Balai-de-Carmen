@@ -1,0 +1,48 @@
+@use "@/styles/abstracts/variables" as variables;
+
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter);
+  border-radius: 3.40282e38px;
+  padding: 14px 28px;
+  width: fit-content;
+}
+
+.dark {
+  background-color: variables.$secondary-color;
+  color: variables.$primary-color;
+  gap: variables.$spacing-sm;
+  transition: opacity 200ms ease;
+  &:hover .arrow {
+    transform: translateX(6px);
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.arrow {
+  transition: transform 200ms ease;
+}
+
+.light {
+  color: variables.$secondary-color;
+  border: 1px solid rgba(variables.$secondary-color, 0.35);
+  background-color: rgba(variables.$primary-color, 0.15);
+  transition: background-color 200ms ease;
+  &:hover {
+    background-color: rgba(variables.$primary-color-accent, 0.75);
+  }
+}
+
+// -------------préférence de réduction des animations-----------------
+
+@media (prefers-reduced-motion: reduce) {
+  .dark {
+    &:hover .arrow {
+      transform: none;
+    }
+  }
+}
