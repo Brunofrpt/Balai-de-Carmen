@@ -1,0 +1,106 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+// constante afin que le titre gagne 12px(pour une racine de 16) a chaque écran media queries
+$hero-font-step: 0.75rem;
+
+//------------------------------------- règles communes -----------------------------------------//
+.heroSection,
+.services,
+.aPropos {
+  padding-block: variables.$spacing-section;
+}
+
+//------------------------------------- hero section -----------------------------------------//
+.heroSection {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(variables.$primary-color, 0.95) 0%,
+      rgba(variables.$primary-color, 0.7) 50%,
+      rgba(variables.$primary-color, 0.25) 100%
+    ),
+    url("/copro.webp");
+  // background-size: cover;
+  background-position: center;
+
+  .title {
+    font-size: variables.$font-size-el;
+    line-height: variables.$font-size-el-line-height;
+    letter-spacing: -0.48px;
+  }
+
+  .accentTitle {
+    font-size: variables.$font-size-max;
+    line-height: variables.$font-size-max-line-height;
+  }
+
+  .description {
+    font-size: variables.$font-size-m;
+    line-height: variables.$font-size-m-line-height;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+  // align-items: center;
+}
+
+.blocButtons {
+  display: flex;
+  gap: variables.$spacing-sm;
+  flex-wrap: wrap;
+  padding-top: variables.$spacing-ml;
+}
+
+//------------------------------------- section services -----------------------------------------//
+
+.services {
+  background-color: rgba(variables.$primary-color, 0.95);
+}
+
+//------------------------------------- section À propos -----------------------------------------//
+
+.aPropos {
+  background-color: rgba(variables.$primary-color-accent, 0.6);
+}
+
+.blocImage {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.facadeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//------------------------------------- Media queries -----------------------------------------//
+
+@include mixins.tablet {
+  .heroSection {
+    .title {
+      font-size: variables.$font-size-el + $hero-font-step;
+    }
+
+    .accentTitle {
+      font-size: variables.$font-size-max + $hero-font-step;
+    }
+  }
+}
+
+@include mixins.desktop {
+  .heroSection {
+    .title {
+      font-size: variables.$font-size-el + 2 * $hero-font-step;
+    }
+
+    .accentTitle {
+      font-size: variables.$font-size-max + 2 * $hero-font-step;
+    }
+  }
+}
