@@ -22,6 +22,7 @@ $font-size-ml: 1.5rem;
 $font-size-l: 1.75rem;
 $font-size-xl: 2rem;
 $font-size-xxl: 2.25rem;
+$font-size-xxl-line-height: math.div(2.5rem, $font-size-xxl);
 $font-size-el: 3rem;
 $font-size-el-line-height: math.div(3.15rem, $font-size-el);
 $font-size-max: 3.75rem;

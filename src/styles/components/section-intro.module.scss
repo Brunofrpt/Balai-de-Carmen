@@ -1,0 +1,51 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+// constante afin que le titre gagne 12px(pour une racine de 16) a chaque écran
+$title-font-step: 0.75rem;
+
+.label {
+  font-family: var(--font-inter);
+  font-size: variables.$font-size-xs;
+  letter-spacing: 4.8px;
+  color: variables.$text-third-color;
+  line-height: variables.$font-size-xs-line-height;
+}
+
+.title {
+  font-family: var(--font-cormorant-garamond);
+  font-size: variables.$font-size-xxl;
+  font-weight: 400;
+  line-height: variables.$font-size-xxl-line-height;
+  letter-spacing: -0.36px;
+  max-width: 576px;
+  text-wrap: balance;
+}
+
+.accentTitle {
+  color: variables.$text-third-color;
+  font-family: var(--font-great-vibes);
+  font-weight: 400;
+  font-size: variables.$font-size-el;
+  line-height: variables.$font-size-el-line-height;
+}
+
+.description {
+  font-family: var(--font-inter);
+  font-size: variables.$font-size-base;
+  line-height: variables.$font-size-base-line-height;
+  color: variables.$text-primary-color;
+  max-width: 576px;
+}
+
+//------------------------------------- Media queries -----------------------------------------//
+
+@include mixins.tablet {
+  .title {
+    font-size: variables.$font-size-xxl + $title-font-step;
+  }
+
+  .accentTitle {
+    font-size: variables.$font-size-el + $title-font-step;
+  }
+}
