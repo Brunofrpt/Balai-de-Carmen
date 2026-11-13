@@ -40,15 +40,18 @@ export default function Home() {
         </Container>
       </section>
       <section className={styles.aPropos}>
-        <Container className={styles.flex}>
-          <SectionIntro
-            label="À PROPOS"
-            title="Depuis 2010 au service des"
-            titleSpan="copropriétées et bureaux"
-            description="Fondée par Carmen, notre équipe entièrement formée œuvre avec délicatesse 
+        <Container className={`${styles.flex} ${styles.aProposContainer}`}>
+          <header className={styles.headerAPropos}>
+            <SectionIntro
+              label="À PROPOS"
+              title="Depuis 2010 au service des"
+              titleSpan="copropriétées et bureaux"
+              description="Fondée par Carmen, notre équipe entièrement formée œuvre avec délicatesse 
             dans les plus belles copropriétés et bureaux de la capitale.
             Nous croyons qu'un lieu propre est un lieu qui inspire — et que chaque détail compte."
-          />
+            />
+            <ButtonLink href="/a-propos" variant="text">Découvrir notre histoire</ButtonLink>
+          </header>
           <div className={styles.blocImage}>
             <Image
               className={styles.facadeImg}

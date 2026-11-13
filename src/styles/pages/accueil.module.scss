@@ -67,6 +67,18 @@ $hero-font-step: 0.75rem;
   background-color: rgba(variables.$primary-color-accent, 0.6);
 }
 
+.aPropos {
+  .flex {
+    gap: variables.$spacing-intra-section;
+  }
+}
+
+.headerAPropos {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
 .blocImage {
   border-radius: 20px;
   overflow: hidden;
@@ -90,6 +102,12 @@ $hero-font-step: 0.75rem;
     .accentTitle {
       font-size: variables.$font-size-max + $hero-font-step;
     }
+  }
+  .aProposContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    
   }
 }
 
