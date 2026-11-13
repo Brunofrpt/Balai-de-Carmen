@@ -11,6 +11,12 @@ $hero-font-step: 0.75rem;
   padding-block: variables.$spacing-section;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
 //------------------------------------- hero section -----------------------------------------//
 .heroSection {
   background-image:
@@ -71,12 +77,6 @@ $hero-font-step: 0.75rem;
   .flex {
     gap: variables.$spacing-intra-section;
   }
-}
-
-.headerAPropos {
-  display: flex;
-  flex-direction: column;
-  gap: variables.$spacing-ml;
 }
 
 .blocImage {

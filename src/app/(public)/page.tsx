@@ -9,6 +9,8 @@ export default function Home() {
     <>
       <section className={styles.heroSection}>
         <Container className={styles.flex}>
+          
+          <header className={styles.sectionHeader}>
           <SectionIntro
             label=" NETTOYAGE · COPROPRIÉTÉS & BUREAUX PARISIENS"
             headingTag="h1"
@@ -21,6 +23,8 @@ export default function Home() {
           immeuble respire la sérénité."
             descriptionClassName={styles.description}
           />
+          </header>
+
           <div className={styles.blocButtons}>
             <ButtonLink href="/contact">Demander un devis</ButtonLink>
             <ButtonLink href="/services" variant="light">
@@ -29,19 +33,25 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
       <section className={styles.services}>
-        <Container className={styles.flex}>
+        <Container>
+
+          <header className={styles.sectionHeader}>
           <SectionIntro
             label="NOS PRESTATIONS"
             title="Un service taillé pour"
             titleSpan="chaque lieu"
             description="De l'immeuble haussmannien aux bureaux modernes, un savoir-faire complet au service de votre quotidien."
           />
+          </header>
         </Container>
       </section>
+
       <section className={styles.aPropos}>
         <Container className={`${styles.flex} ${styles.aProposContainer}`}>
-          <header className={styles.headerAPropos}>
+
+          <header className={styles.sectionHeader}>
             <SectionIntro
               label="À PROPOS"
               title="Depuis 2010 au service des"
@@ -52,6 +62,7 @@ export default function Home() {
             />
             <ButtonLink href="/a-propos" variant="text">Découvrir notre histoire</ButtonLink>
           </header>
+
           <div className={styles.blocImage}>
             <Image
               className={styles.facadeImg}
