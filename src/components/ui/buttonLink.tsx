@@ -5,7 +5,7 @@ import styles from "@/styles/components/button-link.module.scss";
 type ButtonLinkProps = {
   href: string;
   children: ReactNode;
-  variant?: "dark" | "light";
+  variant?: "dark" | "light" | "text";
   className?: string;
 };
 
@@ -21,7 +21,7 @@ export default function ButtonLink({
       className={`${styles.buttonLink} ${styles[variant]} ${className}`}
     >
       {children}
-      {variant === "dark" ? (
+      {variant === "dark" || variant === "text" ? (
         <span aria-hidden="true" className={styles.arrow}>
           →
         </span>

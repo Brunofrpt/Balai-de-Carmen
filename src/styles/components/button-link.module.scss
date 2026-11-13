@@ -37,10 +37,24 @@
   }
 }
 
+.text {
+  color: variables.$secondary-color;
+  gap: variables.$spacing-sm;
+  &:hover .arrow {
+    transform: translateX(6px);
+  }
+  padding: 0;
+}
+
 // -------------préférence de réduction des animations-----------------
 
 @media (prefers-reduced-motion: reduce) {
   .dark {
+    &:hover .arrow {
+      transform: none;
+    }
+  }
+  .text {
     &:hover .arrow {
       transform: none;
     }
