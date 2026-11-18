@@ -10,6 +10,10 @@
   font-size: variables.$font-size-sm;
   line-height: variables.$font-size-sm-line-height;
 
+  :focus-visible {
+    outline-color: variables.$primary-color;
+  }
+
   .footerLogo {
     color: variables.$primary-color;
     font-size: variables.$font-size-xxl;

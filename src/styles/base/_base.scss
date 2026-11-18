@@ -1,4 +1,10 @@
+@use "@/styles/abstracts/variables" as variables;
+
 body {
   font-family: var(--font-inter);
   font-weight: 400;
+}
+
+:focus-visible {
+  outline-color: variables.$secondary-color;
 }
