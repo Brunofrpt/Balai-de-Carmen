@@ -1,0 +1,97 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  // aspect-ratio: 3 / 4;
+  border: solid 1px variables.$primary-color-accent;
+}
+
+.cardInteractive {
+  transition: box-shadow 500ms ease;
+
+  &:hover {
+    box-shadow: 0 20px 60px -20px variables.$secondary-color-accent;
+  }
+  &:hover .cardImage {
+    transform: scale(1.05);
+  }
+}
+
+.linkClassName {
+  flex-grow: 1;
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
+}
+
+.cardImage {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.blocDescription {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-s;
+  padding: variables.$spacing-xl;
+}
+
+.cardTitle {
+  font-family: var(--font-cormorant-garamond);
+  font-size: variables.$font-size-ml;
+  line-height: variables.$font-size-ml-line-height;
+  font-weight: 400;
+  color: variables.$text-primary-opaque;
+}
+
+.blocDescription {
+  font-size: variables.$font-size-sm;
+  line-height: variables.$font-size-sm-line-height;
+  color: variables.$text-primary-color;
+}
+
+.fakeLink {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 4px;
+  color: variables.$secondary-color;
+  gap: variables.$spacing-sm;
+  &:hover .arrow {
+    transform: translateX(6px);
+  }
+}
+
+.arrow {
+  transition: transform 200ms ease;
+}
+
+@include mixins.tablet {
+  .card {
+    flex: 1 1 0;
+  }
+}
+
+// -------------préférence de réduction des animations-----------------
+
+@media (prefers-reduced-motion: reduce) {
+  .cardInteractive {
+    transition: none;
+
+    &:hover .cardImage {
+      transform: none;
+    }
+  }
+  .fakeLink {
+    &:hover .arrow {
+      transform: none;
+    }
+  }
+}

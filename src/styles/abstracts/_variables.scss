@@ -3,7 +3,9 @@
 $primary-color: #fef8fccc;
 $primary-color-accent: #fcd5e7;
 $secondary-color: #992b6d;
+$secondary-color-accent: #992b6d40;
 $third-color: #ae568b;
+$border-card-color: #edd7e4;
 
 $text-primary-color: #34152bbf;
 $text-primary-opaque: #34152b;
@@ -19,6 +21,7 @@ $font-size-base-line-height: 1.625;
 $font-size-m: 1.125rem;
 $font-size-m-line-height: math.div(1.4625rem, $font-size-m);
 $font-size-ml: 1.5rem;
+$font-size-ml-line-height: math.div(2rem, $font-size-ml);
 $font-size-l: 1.75rem;
 $font-size-xl: 2rem;
 $font-size-xxl: 2.25rem;
