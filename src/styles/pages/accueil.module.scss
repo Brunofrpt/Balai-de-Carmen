@@ -67,6 +67,19 @@ $hero-font-step: 0.75rem;
   background-color: rgba(variables.$primary-color, 0.95);
 }
 
+.services {
+  .flex {
+    gap: variables.$spacing-intra-section;
+    align-items: center;
+  }
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
 //------------------------------------- section À propos -----------------------------------------//
 
 .aPropos {
@@ -103,11 +116,15 @@ $hero-font-step: 0.75rem;
       font-size: variables.$font-size-max + $hero-font-step;
     }
   }
+
+  .servicesList {
+    flex-direction: row;
+  }
+
   .aProposContainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    
   }
 }
 
