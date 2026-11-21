@@ -14,12 +14,12 @@
   background-color: variables.$secondary-color;
   color: variables.$primary-color;
   gap: variables.$spacing-sm;
-  transition: opacity 200ms ease;
+  transition: background-color 200ms ease;
   &:hover .arrow {
     transform: translateX(6px);
   }
   &:hover {
-    opacity: 0.9;
+    background-color: variables.$secondary-color-hover;
   }
 }
 
