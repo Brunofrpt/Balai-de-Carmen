@@ -42,6 +42,9 @@
   flex-direction: column;
   gap: variables.$spacing-s;
   padding: variables.$spacing-xl;
+  font-size: variables.$font-size-sm;
+  line-height: variables.$font-size-sm-line-height;
+  color: variables.$text-primary-color;
 }
 
 .cardTitle {
@@ -50,12 +53,6 @@
   line-height: variables.$font-size-ml-line-height;
   font-weight: 400;
   color: variables.$text-primary-opaque;
-}
-
-.blocDescription {
-  font-size: variables.$font-size-sm;
-  line-height: variables.$font-size-sm-line-height;
-  color: variables.$text-primary-color;
 }
 
 .fakeLink {

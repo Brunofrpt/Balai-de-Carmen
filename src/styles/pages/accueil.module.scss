@@ -64,9 +64,7 @@ $hero-font-step: 0.75rem;
 
 .services {
   background-color: rgba(variables.$primary-color, 0.95);
-}
 
-.services {
   .flex {
     gap: variables.$spacing-intra-section;
     align-items: center;
@@ -83,9 +81,7 @@ $hero-font-step: 0.75rem;
 
 .aPropos {
   background-color: rgba(variables.$primary-color-accent, 0.6);
-}
 
-.aPropos {
   .flex {
     gap: variables.$spacing-intra-section;
   }
