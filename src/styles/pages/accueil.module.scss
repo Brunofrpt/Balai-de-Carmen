@@ -27,7 +27,6 @@ $hero-font-step: 0.75rem;
       rgba(variables.$primary-color, 0.25) 100%
     ),
     url("/copro.webp");
-  // background-size: cover;
   background-position: center;
 
   .title {
@@ -137,5 +136,11 @@ $hero-font-step: 0.75rem;
     .accentTitle {
       font-size: variables.$font-size-max + 2 * $hero-font-step;
     }
+  }
+}
+
+@media (min-width: 1536px) {
+  .heroSection {
+    background-size: cover;
   }
 }

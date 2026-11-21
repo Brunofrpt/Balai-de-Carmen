@@ -107,7 +107,8 @@ export default function Home() {
               src="/copro2.webp"
               alt="façade immeuble Hausmanienne"
               width={1000}
-              height={583}
+              height={563}
+              sizes="(min-width: 1300px) 594px, (min-width: 768px) calc(50vw - 56px), calc(100vw - 48px)"
             />
           </div>
         </Container>
