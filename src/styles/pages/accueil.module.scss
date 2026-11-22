@@ -5,7 +5,7 @@
 $hero-font-step: 0.75rem;
 
 //------------------------------------- règles communes -----------------------------------------//
-.heroSection,
+
 .services,
 .aPropos {
   padding-block: variables.$spacing-section;
@@ -28,6 +28,7 @@ $hero-font-step: 0.75rem;
     ),
     url("/copro.webp");
   background-position: center;
+  padding-block: variables.$spacing-hero;
 
   .title {
     font-size: variables.$font-size-el;
@@ -102,11 +103,16 @@ $hero-font-step: 0.75rem;
 //------------------------------------- Media queries -----------------------------------------//
 
 @include mixins.tablet {
+  .services,
+  .aPropos {
+    padding-block: variables.$spacing-section-tablet;
+  }
+
   .heroSection {
+    padding-block: variables.$spacing-hero-tablet;
     .title {
       font-size: variables.$font-size-el + $hero-font-step;
     }
-
     .accentTitle {
       font-size: variables.$font-size-max + $hero-font-step;
     }
@@ -125,10 +131,10 @@ $hero-font-step: 0.75rem;
 
 @include mixins.desktop {
   .heroSection {
+    padding-block: variables.$spacing-hero-desktop;
     .title {
       font-size: variables.$font-size-el + 2 * $hero-font-step;
     }
-
     .accentTitle {
       font-size: variables.$font-size-max + 2 * $hero-font-step;
     }
