@@ -1,0 +1,33 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+.section {
+  padding-block: variables.$spacing-section;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-ml;
+}
+
+@include mixins.tablet {
+  .section {
+    padding-block: variables.$spacing-section-tablet;
+  }
+  .servicesList {
+    flex-direction: row;
+  }
+}

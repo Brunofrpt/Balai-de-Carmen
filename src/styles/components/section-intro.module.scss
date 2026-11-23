@@ -12,6 +12,7 @@ $title-font-step: 0.75rem;
   line-height: variables.$font-size-xs-line-height;
 }
 
+// Définit les règles de base pour les titres de sections
 .title {
   font-family: var(--font-cormorant-garamond);
   font-size: variables.$font-size-xxl;
@@ -22,6 +23,7 @@ $title-font-step: 0.75rem;
   text-wrap: balance;
 }
 
+// Définit les règles de base pour les mises en valeur des titres de sections
 .accentTitle {
   color: variables.$text-third-color;
   font-family: var(--font-great-vibes);
@@ -38,6 +40,23 @@ $title-font-step: 0.75rem;
   max-width: 576px;
 }
 
+// adapations typographiques de la variante "hero"
+.heroTitle {
+  font-size: variables.$font-size-el;
+  line-height: variables.$font-size-el-line-height;
+  letter-spacing: -0.48px;
+}
+
+.heroAccentTitle {
+  font-size: variables.$font-size-max;
+  line-height: variables.$font-size-max-line-height;
+}
+
+.heroDescription {
+  font-size: variables.$font-size-m;
+  line-height: variables.$font-size-m-line-height;
+}
+
 //------------------------------------- Media queries -----------------------------------------//
 
 @include mixins.tablet {
@@ -47,5 +66,22 @@ $title-font-step: 0.75rem;
 
   .accentTitle {
     font-size: variables.$font-size-el + $title-font-step;
+  }
+
+  .heroTitle {
+    font-size: variables.$font-size-el + $title-font-step;
+  }
+
+  .heroAccentTitle {
+    font-size: variables.$font-size-max + $title-font-step;
+  }
+}
+
+@include mixins.desktop {
+  .heroTitle {
+    font-size: variables.$font-size-el + 2 * $title-font-step;
+  }
+  .heroAccentTitle {
+    font-size: variables.$font-size-max + 2 * $title-font-step;
   }
 }

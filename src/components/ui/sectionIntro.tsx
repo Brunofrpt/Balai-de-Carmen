@@ -11,6 +11,7 @@ type SectionIntroProps = {
   accentTitleClassName?: string;
   descriptionClassName?: string;
   headingTag?: "h1" | "h2" | "h3";
+  variant?: "hero" | "default";
 };
 
 export default function SectionIntro({
@@ -23,6 +24,7 @@ export default function SectionIntro({
   accentTitleClassName = "",
   descriptionClassName = "",
   headingTag = "h2",
+  variant = "default",
 }: SectionIntroProps) {
   return (
     <>
@@ -30,15 +32,25 @@ export default function SectionIntro({
       {createElement(
         headingTag,
         {
-          className: `${styles.title} ${titleClassName}`,
+          className: `${styles.title} ${titleClassName} ${
+            variant === "hero" ? styles.heroTitle : ""
+          }`,
         },
         title,
         " ",
-        <span className={`${styles.accentTitle} ${accentTitleClassName}`}>
+        <span
+          className={`${styles.accentTitle} ${accentTitleClassName} ${
+            variant === "hero" ? styles.heroAccentTitle : ""
+          }`}
+        >
           {titleSpan}
         </span>,
       )}
-      <p className={`${styles.description} ${descriptionClassName}`}>
+      <p
+        className={`${styles.description} ${descriptionClassName} ${
+          variant === "hero" ? styles.heroDescription : ""
+        }`}
+      >
         {description}
       </p>
     </>

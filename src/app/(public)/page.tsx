@@ -1,4 +1,5 @@
 import styles from "@/styles/pages/accueil.module.scss";
+import sectionStyles from "@/styles/layout/sections.module.scss";
 import Container from "@/components/layout/Container/Container";
 import ButtonLink from "@/components/ui/buttonLink";
 import SectionIntro from "@/components/ui/sectionIntro";
@@ -9,19 +10,17 @@ export default function Home() {
   return (
     <>
       <section className={styles.heroSection}>
-        <Container className={styles.flex}>
-          <header className={styles.sectionHeader}>
+        <Container className={sectionStyles.sectionContent}>
+          <header className={sectionStyles.sectionHeader}>
             <SectionIntro
               label=" NETTOYAGE · COPROPRIÉTÉS & BUREAUX PARISIENS"
               headingTag="h1"
               title="Le nettoyage,"
-              titleClassName={styles.title}
               titleSpan="un savoir-faire familial"
-              accentTitleClassName={styles.accentTitle}
+              variant="hero"
               description="Depuis quinze ans, nous prenons soin des plus belles adresses
-          parisiennes. Un entretien méticuleux, discret, pour que chaque
-          immeuble respire la sérénité."
-              descriptionClassName={styles.description}
+                parisiennes. Un entretien méticuleux, discret, pour que chaque
+                immeuble respire la sérénité."
             />
           </header>
 
@@ -34,9 +33,11 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className={styles.services}>
-        <Container className={styles.flex}>
-          <header className={styles.sectionHeader}>
+      <section className={`${styles.services} ${sectionStyles.section}`}>
+        <Container
+          className={`${sectionStyles.sectionContent} ${styles.servicesContent}`}
+        >
+          <header className={sectionStyles.sectionHeader}>
             <SectionIntro
               label="NOS PRESTATIONS"
               title="Un service taillé pour"
@@ -44,7 +45,7 @@ export default function Home() {
               description="De l'immeuble haussmannien aux bureaux modernes, un savoir-faire complet au service de votre quotidien."
             />
           </header>
-          <ul className={styles.servicesList} role="list">
+          <ul className={sectionStyles.servicesList} role="list">
             <ServiceCards
               href="/services/entretien-immeubles-&-coproprietees"
               src="/etages.webp"
@@ -85,9 +86,11 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className={styles.aPropos}>
-        <Container className={`${styles.flex} ${styles.aProposContainer}`}>
-          <header className={styles.sectionHeader}>
+      <section className={`${styles.aPropos} ${sectionStyles.section}`}>
+        <Container
+          className={`${sectionStyles.sectionContent} ${styles.aProposContainer}`}
+        >
+          <header className={sectionStyles.sectionHeader}>
             <SectionIntro
               label="À PROPOS"
               title="Depuis 2010 au service des"
