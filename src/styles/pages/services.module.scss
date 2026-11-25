@@ -1,0 +1,15 @@
+@use "@/styles/abstracts/variables" as variables;
+@use "@/styles/abstracts/mixins" as mixins;
+
+.sectionPrestations {
+  .prestationsContent {
+    gap: variables.$spacing-intra-section;
+  }
+}
+
+.sectionAutres {
+  background-color: variables.$primary-color-accent;
+  .autresContent {
+    gap: variables.$spacing-intra-section;
+  }
+}
