@@ -7,7 +7,8 @@
   border-radius: 20px;
   overflow: hidden;
   // aspect-ratio: 3 / 4;
-  border: solid 1px variables.$primary-color-accent;
+  border: solid 1px variables.$border-card-color;
+  background-color: white;
 }
 
 .cardInteractive {
