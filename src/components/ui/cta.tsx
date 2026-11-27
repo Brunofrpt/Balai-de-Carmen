@@ -7,7 +7,7 @@ export default function Cta() {
       <SectionIntro
         title="Un projet, un immeuble,"
         titleSpan="un devis ?"
-        description="Parlons ensemble de vos besoins nous vous répondons sous 48h"
+        description="Parlons ensemble de vos besoins. Nous vous répondons sous 48 h."
       />
       <ButtonLink href="/contact">Demander un devis</ButtonLink>
     </>

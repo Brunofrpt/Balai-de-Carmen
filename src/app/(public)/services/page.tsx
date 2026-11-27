@@ -19,11 +19,11 @@ export default function Prestations() {
               label="NOS PRESTATIONS DE NETTOYAGE"
               headingTag="h1"
               variant="hero"
-              title="La qualitée de notre expérience"
+              title="La qualité de notre expérience"
               titleClassName={styles.title}
               titleSpan="à votre service"
               accentTitleClassName={styles.accentTitle}
-              description="Chaque prestation est le coeur de notre metier. Et comme chaque lieu est différent,
+              description="Chaque prestation est le cœur de notre métier. Et comme chaque lieu est différent,
           nous l'adaptons sur mesure à vos besoins"
             />
           </header>
@@ -79,45 +79,45 @@ export default function Prestations() {
           <ul className={sectionStyles.servicesList} role="list">
             <ServiceCards
               src="/karcher.webp"
-              alt="nettoyage de d'une cour au Karcher"
+              alt="nettoyage d'une cour au Karcher"
               width={600}
               height={450}
               sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Karcher haute pression"
-              descriptionCard="Décapage et nettoyage pression de vos cours, parking et autres surfaces"
+              descriptionCard="Décapage et nettoyage pression de vos cours, parkings et autres surfaces"
             />
             <ServiceCards
               src="/marbre.webp"
-              alt="Cristalisation d'une entrée en marbre par un de nos agents"
+              alt="Cristallisation d'une entrée en marbre par un de nos agents"
               width={600}
               height={450}
               sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
-              title="Cristalisation de marbre"
-              descriptionCard="Cristalisation de vos halls, marches, palliers, locaux professionnels en marbre"
+              title="Cristallisation de marbre"
+              descriptionCard="Cristallisation de vos halls, marches, paliers, locaux professionnels en marbre"
             />
             <ServiceCards
               src="/remise-en-etat.webp"
-              alt="Remise en état d'une copropriétée par nos agens, après travaux"
+              alt="Remise en état d'une copropriété par nos agents, après travaux"
               width={600}
               height={450}
               sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
-              title="Remise en ếtat"
+              title="Remise en état"
               descriptionCard="Nettoyage complet des parties communes, après travaux, incendies, ou autres"
             />
             <ServiceCards
               src="/shampouinage.webp"
-              alt="shampouinage d'une moquette a la monobrosse"
+              alt="shampouinage d'une moquette à la monobrosse"
               width={600}
               height={450}
               sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Shampouinage moquette"
-              descriptionCard="Nos équipes s'occupent de champouiner en profondeur les moquettes de vos locaux"
+              descriptionCard="Nos équipes s'occupent de shampouiner en profondeur les moquettes de vos locaux"
             />
             <ServiceCards
               src="/debarras.webp"
               alt="Débarras d'une cave d'immeuble par nos équipes"
               width={600}
-              height={500}
+              height={450}
               sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Débarras"
               descriptionCard="Nos équipes s'occupent de retirer les débarras, et tous types d'encombrants"
