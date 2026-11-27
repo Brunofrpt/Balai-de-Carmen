@@ -3,6 +3,7 @@ import sectionStyles from "@/styles/layout/sections.module.scss";
 import Container from "@/components/layout/Container/Container";
 import SectionIntro from "@/components/ui/sectionIntro";
 import ServiceCards from "@/components/ui/servicesCards";
+import Cta from "@/components/ui/cta";
 
 export default function Prestations() {
   return (
@@ -81,6 +82,7 @@ export default function Prestations() {
               alt="nettoyage de d'une cour au Karcher"
               width={600}
               height={450}
+              sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Karcher haute pression"
               descriptionCard="Décapage et nettoyage pression de vos cours, parking et autres surfaces"
             />
@@ -89,6 +91,7 @@ export default function Prestations() {
               alt="Cristalisation d'une entrée en marbre par un de nos agents"
               width={600}
               height={450}
+              sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Cristalisation de marbre"
               descriptionCard="Cristalisation de vos halls, marches, palliers, locaux professionnels en marbre"
             />
@@ -97,6 +100,7 @@ export default function Prestations() {
               alt="Remise en état d'une copropriétée par nos agens, après travaux"
               width={600}
               height={450}
+              sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Remise en ếtat"
               descriptionCard="Nettoyage complet des parties communes, après travaux, incendies, ou autres"
             />
@@ -105,6 +109,7 @@ export default function Prestations() {
               alt="shampouinage d'une moquette a la monobrosse"
               width={600}
               height={450}
+              sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Shampouinage moquette"
               descriptionCard="Nos équipes s'occupent de champouiner en profondeur les moquettes de vos locaux"
             />
@@ -113,10 +118,18 @@ export default function Prestations() {
               alt="Débarras d'une cave d'immeuble par nos équipes"
               width={600}
               height={500}
+              sizes="(min-width: 1300px) 401px, (min-width: 768px) calc((100vw - 96px) / 3), calc(100vw - 48px)"
               title="Débarras"
               descriptionCard="Nos équipes s'occupent de retirer les débarras, et tous types d'encombrants"
             />
           </ul>
+        </Container>
+      </section>
+      <section className={`${sectionStyles.section} ${styles.sectionCta}`}>
+        <Container
+          className={`${sectionStyles.sectionContent} ${styles.ctaContent}`}
+        >
+          <Cta />
         </Container>
       </section>
     </>

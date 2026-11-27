@@ -13,3 +13,10 @@
     gap: variables.$spacing-intra-section;
   }
 }
+
+.sectionCta {
+  .ctaContent {
+    gap: variables.$spacing-ml;
+    align-items: center;
+  }
+}
