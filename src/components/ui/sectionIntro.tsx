@@ -2,7 +2,7 @@ import styles from "@/styles/components/section-intro.module.scss";
 import { createElement } from "react";
 
 type SectionIntroProps = {
-  label: string;
+  label?: string;
   title: string;
   titleSpan: string;
   description: string;
@@ -20,7 +20,7 @@ type SectionIntroProps = {
 };
 
 /**
- * Affiche une introduction composée d'un label, d'un titre en deux parties
+ * Affiche une introduction composée d'un label facultatif, d'un titre en deux parties
  * et d'une description.
  *
  * Les éléments sont rendus dans un fragment React : un paragraphe, un titre
@@ -60,7 +60,12 @@ export default function SectionIntro({
 }: SectionIntroProps) {
   return (
     <>
-      <p className={`${styles.label} ${labelClassName}`}>{label}</p>
+      {label ? (
+        <p className={`${styles.label} ${labelClassName}`}>{label}</p>
+      ) : (
+        ""
+      )}
+
       {createElement(
         headingTag,
         {
@@ -78,6 +83,7 @@ export default function SectionIntro({
           {titleSpan}
         </span>,
       )}
+
       <p
         className={`${styles.description} ${descriptionClassName} ${
           variant === "hero" ? styles.heroDescription : ""
